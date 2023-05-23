@@ -1,0 +1,20 @@
+{% include "header.html" %}
+<div class="container">
+<form method="POST">
+{% csrf_token %}
+<label for="" class="form-label">Enter the subject:</label>
+<input type="text" class="form-control" name="subject">
+<br><br>
+<label for="" class="form-label">Enter queries:</label>
+<input type="text" class="form-control" name="enquire">
+<br>
+<br>
+<input type="submit" value="submit" class="btn btn-secondary">
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+{% include "footer.html" %}

@@ -1,0 +1,130 @@
+{% include "header.html" %}
+{% load static %}
+   
+          <div id="body_index">
+              <section id="sec1">
+              <img src="{% static './image/slid.jpeg' %}" alt="jumbloton image" id="jumb1" >
+              <p><marquee behavior="alternate" scrollamount="12" direction="left" id="jumb2" style="color:black;">Welcome to Health Disease Pred app</marquee></p>
+              </section> 
+              <div>
+              <section id="secs1">
+              Our speciality is to providing the best  <br>
+              for your .
+              </section>
+                <div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators" >
+    <button    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button ">
+    <button    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button >
+    <button   data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static './image/diabetes.jpeg' %}"   class="slid1" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static './image/heartdisease.jpg' %}" class="slid1"  alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static './image/parkinson.jpeg' %}"  class="slid1" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static './image/chronic_kidney_disease.jpg' %}"  class="slid1" alt="...">
+    </div>
+        <div class="carousel-item">
+      <img src="{% static './image/brain_mri.jpg' %}"  class="slid1" alt="...">
+    </div>
+  </div>
+  <button  class="carousel-control-prev" type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button  class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>          
+       {% comment %} sections for card {% endcomment %}
+                   <div class="card container mb-1 text-dark" >
+          <div class="card-body row" >
+                  <div class="col-4">
+                         <img src="{% static './image/diabetes.jpeg' %}" alt="" class="cardimg">
+                  </div>
+                  <div class="col-8">
+                           we are providing the most accurate diabetes predicting website for prediciting the diabetes disease .
+                           <br>
+                           <br>
+                           <button class="btn btn-secondary"><a href="{% url 'heart' %}" style="text-decoration:None; color:white;">Check disease</a> </button>
+                           <button class="btn btn-secondary"><a href="{% url 'enquire' %}" style="text-decoration:none; color:white;">Enquire</a>  </button>
+                  </div>
+          </div>
+           
+                    
+          </div>
+                <div class="card container mb-1 text-dark" >
+          <div class="card-body row" >
+                  <div class="col-4">
+                         <img src="{% static './image/heartdisease.jpg' %}" alt="" class="cardimg">
+                  </div>
+                  <div class="col-8">
+                        we are providing the best web app for predicting whether the patient suffering from the heart disease.
+                        <br>
+                           <br>
+                           <button class="btn btn-secondary"><a href="{% url 'kidney' %}" style="text-decoration:None; color:white;">Check disease</a> </button>
+                           <button class="btn btn-secondary" ><a href="{% url 'enquire' %}" style="text-decoration:none; color:white;">Enquire</a> </button>
+                  </div>
+          </div>          
+          </div>
+               <div class="card container mb-1 text-dark">
+          <div class="card-body row" >
+                  <div class="col-4">
+                         <img src="{% static './image/parkinson.jpeg' %}" alt="" class="cardimg">
+                  </div>
+                  <div class="col-8">
+                         We are providing the best web app for predicting whether  the patient suffering from the parkinsons disease.
+                          <br>
+                           <br>
+                           <button class="btn btn-secondary"><a href="{% url 'parkinson' %}" style="text-decoration:None; color:white;">Check disease</a>   </button>
+                           <button class="btn btn-secondary"><a href="{% url 'enquire' %}" style="text-decoration:none; color:white;">Enquire</a></button>
+                  </div>
+                    
+          </div>          
+          </div>
+               <div class="card container mb-1 text-dark" >
+          <div class="card-body row" >
+                  <div class="col-4">
+                         <img src="{% static './image/chronic_kidney_disease.jpg' %}" alt="" class="cardimg">
+                  </div>
+                  <div class="col-8">
+                          We are providing the best web app for predicting whether the patient suffering from the chronic  kidney disease.
+                          <br>
+                           <br>
+                           <button class="btn btn-secondary"> <a href="{% url 'diab' %}" style="text-decoration:None; color:white;">Check Disese</a> </button>
+                           <button class="btn btn-secondary"><a href="{% url 'enquire' %}" style="text-decoration:none; color:white;">Enquire</a></button>
+                  </div>
+                    
+          </div>          
+          </div>
+                <div class="card container mb-1 text-dark" >
+          <div class="card-body row" >
+                  <div class="col-4">
+                         <img src="{% static './image/brain_mri.jpg' %}" alt="" class="cardimg">
+                  </div>
+                  <div class="col-8">
+                          We are providing the best machine algo for the predicting the mobile price.
+                          <br>
+                           <br>
+                           <button class="btn btn-secondary"> <a href="{% url 'brain_mri' %}" style="text-decoration:None; color:white;">Check disease</a> </button>
+                           <button class="btn btn-secondary"><a href="{% url 'enquire' %}" style="text-decoration:none; color:white;">Enquire</a></button>
+                  </div>
+                    
+          </div>          
+          </div>
+                </div>
+                 <button class="btn btn-secondary" style="text-align:'center';" class="align-content-center text-dark"><a href="#sec1" style="text-decoration:none; color:white;">Back to top</a> </button>
+          </div>
+
+       
+          {% include "footer.html" %}

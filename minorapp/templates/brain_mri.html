@@ -1,0 +1,66 @@
+{% include "header.html" %}
+<body class="bodcolor">
+  
+
+  <form method='POST'>
+  {% csrf_token %}
+    <div class="container"> 
+      <center><h1>Brain MRI Scan</h1></center>
+      
+      {% comment %}
+       <label for="pituitary-tumor" class="form-label">Pituitary Tumor</label>
+      <select name="pittumor" id="" class="form-control" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+  <br><br>
+      <label for="meningioma-tumor" class="form-label">Meningioma Tumor</label>
+       <select name="mentumor" id="" class="form-control">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+  <br><br>
+      <label for="glioma-tumor" class="form-label">Glioma Tumor</label>
+      <select name="glitumor" id="" class="form-control">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+<br><br>
+      <label for="no-tumor" class="form-label">No Tumor</label>
+      <select name="notumor" id="" class="form-control">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+  <br> <br>
+      {% comment %} <label for="brain-mri" class="form-label">Brain MRI</label>
+      <select id="brain-mri" name="brain-mri" class="form-control" required>
+        <option value="">Select the number of brain MRI scans</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select> {% endcomment %}
+       <br> 
+      
+       <label for="" class="form-label">X-ray</label>
+      <input type="file" name="file" id="" class="form-control">
+      <br>
+      <br>
+      <input type="submit" class="btn btn-secondary" value="check">
+    </div>
+  </form>
+  <br>
+  <br>
+  {% comment %} here i make the back option {% endcomment %}
+  <button class="btn btn-secondary"><a href="{% url 'home' %}" style="text-decoration:none; color:white;">Back to Main page</a></button>
+  <hr>
+   <div>
+            <h3>Result: {% if y %}
+             {{y}}
+            {% else %}
+      
+            {% endif %}  </h3>
+            </div>
+            <hr>
+{% include "footer.html" %}

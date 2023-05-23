@@ -1,0 +1,75 @@
+{% comment %} rajat work on this page {% endcomment %}
+{% include "header.html" %}
+<body class="bodcolor">
+<div class="container">
+          <h1>Welcome to Heart disese Predictor web app</h1>
+          <form method="POST">
+          {% csrf_token %}
+          <label for="" class="form-label">Age:</label>
+          <input type="text" name="age" class="form-control" required><br><br>
+          <label for="" class="form-label">Sex</label>
+          <select name="sex" id="" class="form-control" required>
+          <option value="1.0">Male</option>
+          <option value="0.0">Female</option>
+          </select> <br><br>
+          <label for="" class="form-label">cp</label>
+          <input type="text" name="cp" class="form-control" required> <br><br>
+          <label for="" class="form-label">trestbps</label>
+          <input type="text" name="trestbps" class="form-control" required> <br><br>
+          <label for="" class="form-label">chol</label>
+          <input type="text" name="chol" class="form-control" required> <br><br>
+          <label for="" class="form-label">fbs</label>
+          <select name="fbs" id="" class="form-control" required>
+          <option value="1">yes</option>
+          <option value="0">no</option>
+          </select> <br><br>
+          <label for="" class="form-label">restecg</label>
+          <select name="restecg" id="" class="form-control" required>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          </select> <br><br>
+          <label for="" class="form-label">thalach</label>
+          <input type="text" name="thalach" class="form-control" required><br><br>
+          <label for="" class="form-label">exang</label>
+          <select name="exang" id="" class="form-control" required>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+          </select>
+          <br><br>
+          <label for="" class="form-label">oldpeak</label>
+          <input type="text" name="oldpeak" class="form-control" required> <br><br>
+          <label for="" class="form-label">slope</label>
+          <input type="text" name="slope" class="form-control" required> <br><br>
+          <label for="" class="form-label">ca</label>
+          <select name="ca" id="" class="form-control" required>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          </select> <br><br>
+
+          <label for="" class="form-label">thal</label>
+          <select name="thal" id="" class="form-control" required>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          </select>
+          <br><br>
+          <input type="submit" value="Check" class="btn btn-secondary">
+          </form>
+        <br>
+            <button class="btn btn-secondary"><a href="{% url 'home' %}" style="text-decoration:none; color:white;">Back to Main page</a></button>
+            </div>
+            <hr>
+             <div>
+            <h3>Result: {% if y %}
+             {{y}}
+            {% else %}
+         
+            {% endif %}  </h3>
+            </div>
+            <hr>
+{% include "footer.html" %}

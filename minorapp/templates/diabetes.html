@@ -1,0 +1,69 @@
+{% include "header.html" %}
+<body class="bodcolor">
+  
+
+<form method='POST'>
+{% csrf_token %} 
+  <div class="container">  
+  <center>  <h1> Welcome to diabetes prediction</h1> </center>  
+ 
+  <label for="" class="form-label">Pregencies</label>
+  <select name="Pregnancies" class="form-control" required>  
+<option value="Pregnancies">Pregnancies</option>  
+<option value="1">1</option>  
+<option value="2">2</option>  
+<option value="3">3</option>  
+<option value="4">4</option>  
+<option value="5">5</option>  
+<option value="6">6</option>  
+<option value="7">7</option>  
+<option value="8">8</option>  
+<option value="9">9</option>  
+<option value="10">10</option>  
+<option value="11">11</option>  
+<option value="12">12</option>  
+<option value="13">13</option>  
+<option value="14">14</option>  
+<option value="15">15</option>  
+<option value="16">16</option>  
+<option value="17">17</option>    
+</select>  
+<br>
+<label class="form-label"> Glucose </label>   
+<input class="form-control" type="text" name="glucose" placeholder= "Glucose" size="15" required /> 
+<br>  
+<label class="form-label"> Blood Pressure </label>   
+<input class="form-control" type="text" name="blood Pressure" placeholder="Blood Pressure" size="15" required />  
+<br>  
+<label class="form-label"> Skin Thickness </label>    
+<input class="form-control" type="text" name="skin thickness" placeholder="Skin Thickness" size="15"required />   
+<br> 
+<label class="form-label"> Insulin </label>   
+<input class="form-control" type="text" name="insulin" placeholder= "Insulin" size="15" required />   
+<br> 
+<label class="form-label">  BMI </label>   
+<input class="form-control" type="text" name="BMI" placeholder="BMI" size="15" required />   
+<br> 
+<label class="form-label"> DiabetesPedigreeFunction </label>    
+<input class="form-control" type="text" name="diabetespedigreefunction" placeholder="DiabetesPedigreeFunction" size="15"required /> 
+<br>
+<label for="" class="form-label">Age</label>
+<input type="text" name='age' class="form-control">   
+<div>    
+<input type="submit" value="submit" class="btn btn-secondary">
+</div>    
+</div>     
+</form>
+<br>
+<br>
+  <button class="btn btn-secondary"><a href="{% url 'home' %}" style="text-decoration:none; color:white;">Back to Main page</a></button>  
+  <hr>
+   <div>
+            <h3>Result: {% if y %}
+             {{y}}
+           
+            {% endif %}  </h3>
+            </div>
+            <hr>
+{% include "footer.html" %}
+

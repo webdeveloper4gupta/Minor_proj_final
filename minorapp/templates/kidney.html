@@ -1,0 +1,104 @@
+{% comment %} herre i write the code {% endcomment %}
+{% include "header.html" %}
+<body class="bodcolor">
+<div class="container" class="bodcolor">
+          {% comment %} here i make the columns of our website  {% endcomment %}
+          <h1>Welcome to  Kidney disease predictor</h1>
+          <form method='POST'>
+          {% csrf_token %}
+          <label for="" class="form-label">Age:</label>
+          <input type="text" name="age" id="" class="form-control" required><br><br>
+          <label for="" class="form-label">Blood Pressure</label>
+          <input type="text" name="bloodpressure" class="form-control" required><br><br>
+          <label for="" class="form-label">Specific Gravity</label>
+          <input type="text" name="specificgravity" id="" class="form-control" required><br><br>
+          <label for="" class="form-label">Albumin</label>
+          <input type="text" name="Albumin" class="form-control" required>
+          <br><br>
+           <label for="" class="form-label">Sugar</label>
+          <input type="text" name="Sugar" class="form-control" required><br><br>
+          <label for="" class="form-label">Blood Glucose Random</label>
+          <input type="text" name="BloodGlucoseRandom" class="form-control" required><br><br>
+          <label for="" class="form-label">Blood Urea</label>
+          <input type="text" name="Blood Urea" id="" class="form-control" required><br><br>
+          <label for="" class="form-label">Serum Creatinine</label>
+          <input type="text" name="Serum Creatinine" id="" class="form-control" required><br><br>
+          <label for="" class="form-label">Sodium</label>
+          <input type="text" name="Sodium" id="" class="form-control" required><br><br>
+          <label for="" class="form-label">Potassium</label>
+          <input type="text" name="Potassium" class="form-control" required><br><br>
+          <label for="" class="form-label">Hemoglobin</label>
+          <input type="text" name="Hemoglobin" class="form-control" required><br><br>
+          <label for="" class="form-label">Packed Cell Volume</label>
+          <input type="text" name="Packed Cell Volume" class="form-control" required><br><br>
+          <label for="" class="form-label">White Blood Cells</label>
+          <input type="text" name="White Blood Cells" class="form-control" required><br><br>
+          <label for="" class="form-label">Red Blood Cells</label>
+          <input type="text" name="Red Blood Cells" class="form-control" required><br><br>
+          <label for="" class="form-label">Red Blood Cells: normal</label>
+          <select name="Red Blood Cells: normal" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0">No</option>
+          </select><br><br>
+          <label for="" class="form-label">Pus Cells: normal:</label>
+           <select name="Pus Cells: normal" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0">No</option>
+          </select><br><br>
+          <label for="" class="form-label">Pus Cell Clumps: present</label>
+          <select name="Pus Cell Clumps: present" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select><br><br>
+          <label for="" class="form-label">Bacteria: present</label>
+          <select name="Bacteria: present" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select> <br><br>
+          <label for="" class="form-label">Hypertension: yes</label>
+          <select name="Hypertension: yes" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select> <br><br>
+          <label for="" class="form-label">Diabetes Mellitus: yes</label>
+          <select name="Diabetes Mellitus: yes" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select><br><br>
+          <label for="" class="form-label">Coronary Artery Disease: yes</label>
+          <select name="Coronary Artery Disease: yes" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select><br><br>
+          <label for="" class="form-label">Appetite: poor</label>
+          <select name="Appetite: poor" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select><br><br>
+          <label for="" class="form-label">Pedal Edema: yes</label>
+          <select name="Pedal Edema: yes" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select> <br><br>
+          <label for="" class="form-label">Anemia: yes</label>
+          <select name="Anemia: yes" id="" class="form-control" required>
+          <option value="1.0">Yes</option>
+          <option value="0.0">No</option>
+          </select> <br><br>
+    <input type="submit" value="Check" class="btn btn-secondary">
+          </form>
+          <br>
+          <br>
+            <button class="btn btn-secondary"><a href="{% url 'home' %}" style="text-decoration:none; color:white;">Back to Main page</a></button>
+
+            </div>
+            <hr>
+           <div>
+            <h3>Result: {% if y %}
+              {{y}}
+            {% else %}
+          
+            {% endif %}  </h3>
+            </div>
+            <hr>
+{% include "footer.html" %}

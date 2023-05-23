@@ -1,0 +1,70 @@
+{% comment %} here i write the code for parkinsons disease  {% endcomment %}
+{% include "header.html" %}
+<body class="bodcolor" >
+<div class="container">
+
+
+          <h1>Welcome to parkinsons disease checker</h1>
+          <form   method='POST'>
+          {% csrf_token %}
+          <label for="">MDVP:Fo(Hz)</label>
+          <input type="text" name="MDVP:Fo(Hz)" class="form-control" required> <br><br>
+          <label for="">MDVP:Fhi(Hz)</label>
+          <input type="text" name="MDVP:Fhi(Hz)" class="form-control" required> <br><br>
+          <label for="">MDVP:Flo(Hz)</label>
+          <input type="text" name="MDVP:Flo(Hz)" class="form-control" required> <br><br>
+          <label for="">MDVP:Jitter(%)</label>
+          <input type="text" name="MDVP:Jitter(%)" class="form-control" required> <br><br>
+          <label for="">MDVP:Jitter(Abs)</label>
+          <input type="text" name="MDVP:Jitter(Abs)" class="form-control" required> <br><br>
+          <label for="">MDVP:RAP</label>
+          <input type="text" name="MDVP:RAP" class="form-control" required> <br><br>
+          <label for="">MDVP:PPQ</label>
+          <input type="text" name="MDVP:PPQ" class="form-control" required>  <br><br>
+          <label for="">Jitter:DDP</label>
+          <input type="text" name="Jitter:DDP" class="form-control" required> <br><br>
+          <label for="">MDVP:Shimmer</label>
+          <input type="text" name="MDVP:Shimmer" class="form-control" required><br><br>
+          <label for="">MDVP:Shimmer(dB)</label>
+          <input type="text" name="MDVP:Shimmer(dB)" class="form-control" required> <br><br>
+          <label for="">Shimmer:APQ3</label>
+          <input type="text" name="Shimmer:APQ3" class="form-control" required> <br><br>
+          <label for="">Shimmer:APQ5</label>
+          <input type="text" name="Shimmer:APQ5" class="form-control" required> <br><br>
+          <label for="">MDVP:APQ</label>
+          <input type="text" name="MDVP:APQ" class="form-control" required> <br><br>
+          <label for="">Shimmer:DDA</label>
+          <input type="text" name="Shimmer:DDA" class="form-control" required> <br><br>
+          <label for="">NHR</label>
+          <input type="text" name="NHR" class="form-control" required> <br><br>
+          <label for="">HNR</label>
+          <input type="text" name="HNR" class="form-control" required> <br><br>
+          <label for="">RPDE</label>
+          <input type="text" name="RPDE" class="form-control" required> <br><br>
+          <label for="">DFA</label>
+          <input type="text" name="DFA" class="form-control" required> <br><br>
+          <label for="">spread1</label>
+          <input type="text" name="spread1" class="form-control" required> <br><br>
+          <label for="">spread2</label>
+          <input type="text" name="spread2" class="form-control" required> <br><br>
+          <label for="">D2</label>
+          <input type="text" name="D2" class="form-control" required> <br><br>
+          <label for="">PPE</label>
+          <input type="text" name="PPE" class="form-control" required> <br><br>
+
+          {% comment %} here i make the submit button {% endcomment %}
+     <input type="submit" value="submit" class="btn btn-primary"> 
+     <br>
+    <br>
+            </form>
+              <button class="btn btn-secondary"><a href="{% url 'home' %}" style="text-decoration:none; color:Black;">Back to Main page</a></button>
+              </div>
+              <hr>
+              <div>
+            <h3>Result: {% if y %}
+            {{y}}
+            {% else %}
+            {% endif %}  </h3>
+            </div>
+            <hr>
+{% include "footer.html" %}
